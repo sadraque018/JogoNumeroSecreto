@@ -19,6 +19,18 @@ function verificarChute() {
         return;
     }
 
+    chute = Number(chute);
+
+    if (isNaN(chute)) {
+        exibirTextoNaTela('p', 'Por favor, insira um valor numérico.');
+        return;
+    }
+
+    if (chute < 0) {
+        exibirTextoNaTela('p', 'Por favor, insira um número positivo.');
+        return;
+    }
+
     if (chute > numeroLimite) {
         exibirTextoNaTela('p', 'Por favor, insira um número menor que 20.');
         return;
